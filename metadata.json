@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Remix: Invitación de 15 Años - Romina",
+  "description": "Invitación interactiva y elegante para los 15 años de Romina, con música, detalles de eventos en tarjetas 3D, cuenta regresiva, pases y confirmación RSVP.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

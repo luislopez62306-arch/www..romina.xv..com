@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-script: "Great Vibes", cursive;
+  
+  /* Color Palette */
+  --color-blush: #D49A89;
+  --color-blush-light: #FAF5F5;
+  --color-rose-dark: #9D6B84;
+  --color-gold: #C5A059;
+}
+
+/* Custom styles for luxurious look and feel matching the original elegant design */
+body {
+  font-family: var(--font-sans);
+  background-color: #FDFBF7; /* Blanco perla cálido liso */
+  color: #4A4A4A; /* Tono gris elegante de Montserrat */
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ========================================================
+   EFECTOS 3D / TARJETAS (REFORMADOS A DISEÑO ELEGANTE Y PLANO)
+   ======================================================== */
+.relieve-3d {
+    background-color: #FFFFFF;
+    box-shadow: 0 15px 35px rgba(212, 154, 137, 0.15); 
+    border: 1px solid rgba(212, 154, 137, 0.2); 
+    border-radius: 20px;
+}
+.hundido-3d {
+    background: #FAF5F5;
+    border: 1px dashed rgba(212, 154, 137, 0.3);
+    border-radius: 16px;
+}
+.boton-3d {
+    background: #D49A89; /* Blush rose-gold background */
+    color: #FFFFFF !important; /* White text */
+    box-shadow: 0 10px 20px rgba(212, 154, 137, 0.2);
+    border: 1px solid #D49A89;
+    border-radius: 9999px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+.boton-3d:hover {
+    background: #9D6B84; /* Hover to elegant deep rose */
+    border-color: #9D6B84;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(157, 107, 132, 0.3);
+}
+.boton-3d:active {
+    transform: translateY(1px);
+    box-shadow: 0 5px 10px rgba(157, 107, 132, 0.2);
+}
+.texto-grabado {
+    color: #9D6B84; /* Deep rose for headlines */
+}
+
+/* ========================================================
+   NUEVAS ANIMACIONES EXCLUSIVAS PARA TIPOGRAFÍA & REVEAL
+   ======================================================== */
+.reveal-up { opacity: 0; transform: translateY(40px); transition: opacity 1.2s ease-out, transform 1.2s cubic-bezier(0.25, 1, 0.5, 1); }
+.reveal-scale { opacity: 0; transform: scale(0.95); transition: opacity 1.2s ease-out, transform 1.2s cubic-bezier(0.25, 1, 0.5, 1); }
+
+/* Animación de Desenfoque a Nítido (Ideal para títulos gigantes) */
+.reveal-text-blur { opacity: 0; filter: blur(12px); transform: scale(1.05) translateY(20px); transition: all 1.5s cubic-bezier(0.25, 1, 0.5, 1); }
+
+/* Animaciones de deslizamiento lateral (Ideal para nombres y fechas) */
+.reveal-text-left { opacity: 0; transform: translateX(-50px); transition: all 1.2s cubic-bezier(0.25, 1, 0.5, 1); }
+.reveal-text-right { opacity: 0; transform: translateX(50px); transition: all 1.2s cubic-bezier(0.25, 1, 0.5, 1); }
+
+.reveal-up.active, .reveal-scale.active { opacity: 1; transform: translate(0) scale(1); }
+.reveal-text-blur.active { opacity: 1; filter: blur(0); transform: scale(1) translateY(0); }
+.reveal-text-left.active, .reveal-text-right.active { opacity: 1; transform: translateX(0); }
+
+/* Retrasos escalonados */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+.delay-600 { transition-delay: 600ms; }
+
+/* 1. TEXTURA DE PAPEL FINO (Grano sutil estilo Stardust/Cartulina) */
+.textura-papel {
+    background-color: #FDFBF7; /* Color crema base liso */
+}
+
+/* 2. TEXTURA DE RAYAS ELEGANTES (Estilo tapiz clásico) */
+.textura-lineas {
+    background-color: #FDFBF7; /* Color crema base liso */
+}
+
+/* 3. TEXTURA ORO ROSADO CEPILLADO (Metálico para botones o fondos especiales) */
+.textura-metalica {
+    background: linear-gradient(135deg, #FAF5F5 0%, #D49A89 35%, #FDFBF7 50%, #D49A89 65%, #9D6B84 100%);
+    background-size: 200% 200%;
+    animation: brilloMetalico 5s ease infinite;
+}
+
+@keyframes brilloMetalico {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 4. EFECTO RELIEVE (Embossed - Hace que las tarjetas parezcan grabadas en prensa) */
+.embossed {
+  box-shadow: 
+    0 4px 20px rgba(212, 154, 137, 0.1),
+    inset 0 0 0 1px rgba(212, 154, 137, 0.15),
+    inset 2px 2px 6px rgba(255, 255, 255, 0.8),
+    inset -2px -2px 6px rgba(212, 154, 137, 0.05);
+}
+
+.embossed-btn {
+  box-shadow: 
+    0 4px 14px rgba(157, 107, 132, 0.25),
+    inset 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.font-script {
+  font-family: var(--font-script), cursive;
+}
+
+/* Animación suave para la foto de fondo (Glassmorphism) */
+@keyframes subtleZoom {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
+}
+.bg-zoom-anim { 
+    animation: subtleZoom 20s ease-in-out infinite alternate; 
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FDFBF7;
+}
+::-webkit-scrollbar-thumb {
+  background: #E88295;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8C3345;
+}
