@@ -1053,7 +1053,7 @@ export default function App() {
             {config.name}
           </p>
           <p className="font-sans text-[10px] uppercase tracking-widest text-[#9D6B84] font-bold">
-            {config.timePrefix}, {config.year} &bull; Sinaloa, México.
+            {config.timePrefix}, {config.year} &bull; Los Mochis, Sinaloa.
           </p>
           <div className="w-12 h-[1px] bg-[#9D6B84]/25 mx-auto" />
           <p 
