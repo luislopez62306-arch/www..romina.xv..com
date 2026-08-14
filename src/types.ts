@@ -160,3 +160,5 @@ export const INITIAL_CONFIG: InvitationConfig = {
   ],
   adminPassword: "romi",
 };
+  
+ 
